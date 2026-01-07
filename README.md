@@ -70,7 +70,7 @@ Expected Result:
 •	Login should fail
 Actual Result:
 •	Login was successful
-Status: ❌ FAIL
+Status:  FAIL
 Defect:
 Application allows login for a user expected to be restricted.
 
@@ -106,13 +106,131 @@ Automation code was written manually to ensure proper framework structure and ma
 ---
 
 ## Execution Steps
-1. Clone the repository
-2. Open the project in Eclipse / IntelliJ
-3. Update ChromeDriver path if required
-4. Run `LoginTest.java`
-5. Verify test execution and results
 
----
+Step 1: Open Project in IDE
+•	Open Eclipse / IntelliJ
+•	Select File → Open Existing Maven Project
+•	Choose the project folder Int_assignment
+
+Explanation:
+
+The project is a Maven-based automation framework, so opening it as a Maven project allows automatic dependency management and proper execution.
+Step 2: Verify Project Folder Structure (As Implemented)
+Ensure the project structure matches the following layout:
+Int_assignment
+│
+├─ pom.xml
+│
+├─ src
+│  ├─ main
+│  │  ├─ java
+│  │  └─ resources
+│  │
+│  └─ test
+│     ├─ java
+│     │  └─ com
+│     │     └─ INT
+│     │        └─ assignment
+│     │           ├─ base
+│     │           │  └─ BaseTest.java
+│     │           │
+│     │           ├─ pages
+│     │           │  └─ LoginPage.java
+│     │           │
+│     │           ├─ tests
+│     │           │  └─ LoginTest.java
+│     │           │
+│     │           └─ utilit
+│     │              ├─ ExcelUtil.java
+│     │              ├─ ReportManager.java
+│     │              └─ ScreenshotUtil.java
+│     │
+│     └─ resources
+│        └─ testdata
+│           └─ LoginData.xlsx
+│
+├─ reports
+│  └─ ExtentReport.html
+│
+├─ screenshots
+│
+└─ target
+________________________________________
+ Folder & File Explanation
+•	BaseTest.java
+Handles browser setup, teardown, and report initialization.
+•	LoginPage.java
+Page Object Model (POM) class for login actions.
+•	LoginTest.java
+TestNG test class that runs multiple test cases using Excel data.
+•	ExcelUtil.java
+Reads test data from LoginData.xlsx.
+•	ReportManager.java
+Generates Extent HTML reports.
+•	ScreenshotUtil.java
+Captures screenshots automatically when a test case fails.
+•	LoginData.xlsx
+External test data source (data-driven testing).
+•	reports/
+Stores execution report (ExtentReport.html).
+•	screenshots/
+Stores failure screenshots.
+•	target/
+Maven-generated build and test output.
+________________________________________
+ Step 3: Update Maven Dependencies
+•	Right-click project
+•	Select Maven → Update Project
+•	Check Force Update
+•	Click OK
+Explanation:
+This ensures all required dependencies (Selenium, TestNG, Apache POI, Extent Reports) are downloaded and updated correctly.
+________________________________________
+Step 4: Execute Tests Using Maven (Recommended)
+Run the following command from the project root directory:
+mvn clean test
+Explanation:
+•	clean removes previous build files
+•	test runs TestNG tests using the Maven Surefire Plugin
+This is the standard execution approach used in companies.
+________________________________________
+Step 5: Execute Tests Using testng.xml (Optional)
+•	Navigate to:
+•	src/test/resources/testng.xml
+•	Right-click → Run As → TestNG Suite
+Explanation:
+This method allows test execution directly from the IDE for debugging or quick validation.
+________________________________________
+Step 6: View Test Results
+After execution:
+•	Execution status (PASS / FAIL) appears in the console
+•	Detailed reports are generated at:
+•	target/surefire-reports/
+Explanation:
+These reports provide test execution summary, failures, and stack traces.
+________________________________________
+Step 7: Analyze Failure (If Any)
+If a test case fails:
+•	Failure reason is shown in console output
+•	Screenshot is automatically captured and stored in:
+•	output/screenshots/
+Explanation:
+Screenshots help identify UI issues and validate failed scenarios, which is a key automation practice.
+
+
+## How to Run Tests
+1. Open project in Eclipse
+2. Right-click project → Maven → Update Project
+3. Run using:
+mvn clean test
+OR
+Right-click on testng.xml
+Select Run As → TestNG Suite
+OR
+Right-click on LoginTest.java
+Select Run As → TestNG Test
+
 
 ## Author
 Sofik Shaikh
+
