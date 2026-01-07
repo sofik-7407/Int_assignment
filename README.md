@@ -117,6 +117,7 @@ Explanation:
 The project is a Maven-based automation framework, so opening it as a Maven project allows automatic dependency management and proper execution.
 Step 2: Verify Project Folder Structure (As Implemented)
 Ensure the project structure matches the following layout:
+~~~
 Int_assignment
 │
 ├── pom.xml
@@ -156,6 +157,7 @@ Int_assignment
 │
 └── target
 
+~~~
 ________________________________________
  Folder & File Explanation
 •	BaseTest.java
@@ -234,5 +236,6 @@ Select Run As → TestNG Test
 
 ## Author
 Sofik Shaikh
+
 
 
