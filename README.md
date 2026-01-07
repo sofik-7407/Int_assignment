@@ -119,42 +119,43 @@ Step 2: Verify Project Folder Structure (As Implemented)
 Ensure the project structure matches the following layout:
 Int_assignment
 │
-├─ pom.xml
+├── pom.xml
 │
-├─ src
-│  ├─ main
-│  │  ├─ java
-│  │  └─ resources
-│  │
-│  └─ test
-│     ├─ java
-│     │  └─ com
-│     │     └─ INT
-│     │        └─ assignment
-│     │           ├─ base
-│     │           │  └─ BaseTest.java
-│     │           │
-│     │           ├─ pages
-│     │           │  └─ LoginPage.java
-│     │           │
-│     │           ├─ tests
-│     │           │  └─ LoginTest.java
-│     │           │
-│     │           └─ utilit
-│     │              ├─ ExcelUtil.java
-│     │              ├─ ReportManager.java
-│     │              └─ ScreenshotUtil.java
-│     │
-│     └─ resources
-│        └─ testdata
-│           └─ LoginData.xlsx
+├── src
+│   ├── main
+│   │   ├── java
+│   │   └── resources
+│   │
+│   └── test
+│       ├── java
+│       │   └── com
+│       │       └── INT
+│       │           └── assignment
+│       │               ├── base
+│       │               │   └── BaseTest.java
+│       │               │
+│       │               ├── pages
+│       │               │   └── LoginPage.java
+│       │               │
+│       │               ├── tests
+│       │               │   └── LoginTest.java
+│       │               │
+│       │               └── utilit
+│       │                   ├── ExcelUtil.java
+│       │                   ├── ReportManager.java
+│       │                   └── ScreenshotUtil.java
+│       │
+│       └── resources
+│           └── testdata
+│               └── LoginData.xlsx
 │
-├─ reports
-│  └─ ExtentReport.html
+├── reports
+│   └── ExtentReport.html
 │
-├─ screenshots
+├── screenshots
 │
-└─ target
+└── target
+
 ________________________________________
  Folder & File Explanation
 •	BaseTest.java
@@ -233,4 +234,5 @@ Select Run As → TestNG Test
 
 ## Author
 Sofik Shaikh
+
 
